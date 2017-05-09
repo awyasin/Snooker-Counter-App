@@ -1,0 +1,108 @@
+package com.example.android.courtcounter;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    //Tracks the score for Player1
+    int player1 = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    private void displayForPlayer1(int v){
+        displayForPlayer1(0);
+    }
+
+    /**
+     * Increases score for Player1 by 1.
+     */
+    public void addOneForPlayer1(View v) {
+        player1 = player1 + 1;
+        displayForPlayer1(player1);
+    }
+
+    /**
+     * Increases score for Player1 by 2.
+     */
+    public void addTwoForPlayer1(View v) {
+        player1 = player1 + 2;
+        displayForPlayer1(player1);
+    }
+
+    /**
+     * Increases score for Player1 by 3.
+     */
+    public void addThreeForPlayer1(View v) {
+        player1 = player1 + 3;
+        displayForPlayer1(player1);
+
+    }
+
+    /**
+     * Increases score for Player1 by 4.
+     */
+    public void addFourForPlayer1(View v) {
+        player1 = player1 + 4;
+        displayForPlayer1(player1);
+
+    }
+
+    /**
+     * Increases score for Player1 by 5.
+     */
+    public void addFiveForPlayer1(int v) {
+        player1 = player1 + 5;
+        displayForPlayer1(player1);
+
+    }
+
+    /**
+     * Increases score for Player1 by 6.
+     */
+    public void addSixForPlayer1(View v) {
+        player1 = player1 + 6;
+        displayForPlayer1(player1);
+
+    }
+
+    /**
+     * Increases score for Player1 by 7.
+     */
+    public void addSevenForPlayer1(View v) {
+        player1 = player1 + 7;
+        displayForPlayer1(player1);
+
+    }
+
+    /**
+     * Decrease score for Player1 by 1.
+     */
+    public void takeOneFromPlayer1(View v) {
+        player1 = player1 - 1;
+        displayForPlayer1(player1);
+
+    }
+
+    /**
+     * Resets score to 0 for Player1 and Player2.
+     */
+    public void resetScore(View v) {
+        player1 = 0;
+        displayForPlayer1(0);
+    }
+
+    /**
+     * Displays the given score for Player1.
+     */
+    public void displayForTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.player_1_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+}
